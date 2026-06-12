@@ -1,0 +1,76 @@
+/* تنسيق الصفحة كامل */
+body {
+    background-color: #f4f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    direction: rtl;
+    line-height: 2;
+}
+
+/* جميع العناوين */
+h1, h2, h3 {
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* العنوان الرئيسي */
+h1 {
+    font-size: 40px;
+}
+
+/* العناوين الثانوية */
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+/* الفقرات */
+p {
+    font-size: 22px;
+    color: #222;
+    text-align: center;
+    width: 85%;
+    margin: auto;
+}
+
+/* القوائم */
+ul, ol {
+    width: 80%;
+    margin: auto;
+    font-size: 22px;
+    color: #333;
+}
+
+/* العناصر داخل القائمة */
+li {
+    margin-bottom: 12px;
+}
+
+/* الخط الفاصل */
+hr {
+    margin: 35px auto;
+    width: 70%;
+    border: 1px solid #b3d1ff;
+}
+
+/* الرابط */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* تأثير عند المرور على الرابط */
+a:hover {
+    color: #004999;
+    text-decoration: underline;
+}

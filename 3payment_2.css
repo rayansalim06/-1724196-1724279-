@@ -1,0 +1,86 @@
+/* تنسيق الصفحة */
+body {
+    background-color: #f4f8ff;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+/* العنوان */
+h1 {
+    color: #0066cc;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* الخط */
+hr {
+    width: 60%;
+    border: 1px solid #b3d1ff;
+    margin-bottom: 30px;
+}
+
+/* النص */
+p {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* الفورم */
+form {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.2);
+}
+
+/* العناوين الصغيرة */
+label {
+    font-size: 20px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* حقول الإدخال */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #cce0ff;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* عند الضغط على الحقل */
+input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+/* الأزرار */
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* تأثير المرور */
+button:hover {
+    background-color: #004999;
+}
+
+/* الروابط */
+a {
+    text-decoration: none;
+}

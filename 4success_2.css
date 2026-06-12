@@ -1,0 +1,53 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+/* العنوان الرئيسي */
+h1 {
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+/* الخط الفاصل */
+hr {
+    width: 60%;
+    border: 1px solid #cce0ff;
+    margin: 20px auto;
+}
+
+/* الفقرات */
+p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+/* الأزرار */
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* تأثير عند المرور */
+button:hover {
+    background-color: #004999;
+}
+
+/* الروابط */
+a {
+    text-decoration: none;
+}
