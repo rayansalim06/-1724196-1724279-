@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الدفع الإلكتروني</title>
+
+<link rel="stylesheet" href="3payment_2.css">
 </head>
 
 <body>
@@ -17,23 +19,23 @@
         يرجى إدخال بيانات البطاقة لإكمال الحجز.
     </p>
 
-    <form>
+    <form id="paymentform">
 
         <label>اسم صاحب البطاقة:</label>
         <br>
-        <input type="text">
+        <input type="text" id="cardName">
 
         <br><br>
 
         <label>رقم البطاقة:</label>
         <br>
-        <input type="text">
+        <input type="text" id="cardNumber">
 
         <br><br>
 
         <label>تاريخ انتهاء البطاقة:</label>
         <br>
-        <input type="month">
+        <input type="month" id="cardExpiry">
 
         <br><br>
 
@@ -42,14 +44,27 @@
         <input type="password">
 
         <br><br>
-
-       <a href="4success.html">
-    <button type="button">
-        إتمام الدفع
-    </button>
-</a>
+     <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إتمام الدفع</button>
 
     </form>
+
+<script>
+document.getElementById("paymentform").addEventListener("submit", function(event) {
+    event.preventDefault(); // نوقف الانتقال الفوري لكي نفحص الحقول
+
+    var name = document.getElementById("cardName").value.trim();
+    var number = document.getElementById("cardNumber").value.trim();
+
+    if (name === "" || number === "") {
+        alert("الرجاء إدخال اسم صاحب البطاقة ورقم البطاقة أولاً!");
+    } else {
+        // لو البيانات تمام، تظهر رسالة النجاح الكبرى
+        alert("تم الدفع بنجاح! تم تأكيد موعدك في العيادة.");
+        // وينقلك تلقائياً لصفحة النجاح الأخيرة
+        window.location.href = "4success.html";
+    }
+});
+</script>
 
     <br>
 
