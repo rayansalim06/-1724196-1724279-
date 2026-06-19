@@ -9,6 +9,8 @@
 
     <title>موقع حجز المواعيد الطبية</title>
 
+    <link rel="stylesheet" href="2gabout_2.css">
+
 </head>
 
 <body>
@@ -94,13 +96,13 @@
 
     <h2>حجز موعد</h2>
 
-    <form>
+    <form id="paymentform">
 
         <label>الاسم الكامل:</label>
 
         <br>
 
-        <input type="text">
+        <input type="text" id="fullName">
 
         <br><br>
 
@@ -108,7 +110,7 @@
 
         <br>
 
-        <input type="email">
+        <input type="email" id="email">
 
         <br><br>
 
@@ -116,7 +118,7 @@
 
         <br>
 
-        <input type="text">
+        <input type="text" id="phone">
 
         <br><br>
 
@@ -124,7 +126,7 @@
 
         <br>
 
-        <select>
+        <select id="doctor">
 
             <option>د. أحمد</option>
 
@@ -144,7 +146,7 @@
 
         <br>
 
-        <input type="date">
+        <input type="date" id="appointmentDate">
 
         <br><br>
 
@@ -152,7 +154,7 @@
 
         <br>
 
-        <input type="time">
+        <input type="time" id="appointmentTime">
 
         <br><br>
 
@@ -163,17 +165,11 @@
         <textarea rows="4" cols="30"></textarea>
 
         <br><br>
-
-<a href="3payment.html">
-            <button type="button">
-                متابعة إلى الدفع
-            </button>
-        </a>
-
-    </form>
-
-    <hr>
-
+    
+     <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إتمام الحجز</button>   
+     </form>
+<hr>
+    
 <a href="1index.html">
     <button>العودة إلى الصفحة الرئيسية</button>
 </a>
@@ -186,6 +182,24 @@
     <p>رقم الهاتف: +218 91 0000000</p>
 
     <p>الموقع: شحات - ليبيا</p>
+   
+   <script>
+document.getElementById("paymentform").addEventListener("submit", function(event) {
+    event.preventDefault(); // نوقف الانتقال الفوري لكي نفحص الحقول
+
+    var name = document.getElementById("fullName").value.trim();
+    var number = document.getElementById("phone").value.trim();
+
+    if (name === "" || number === "") {
+        alert("الرجاء إدخال اسم صاحب الطلب ورقم الهاتف أولاً!");
+    } else {
+        // لو البيانات تمام، تظهر رسالة النجاح الكبرى
+        alert( "تم الحجز بنجاح!لتأكيد موعدك في  العيادة يرجى الدفع.");
+        // وينقلك تلقائياً لصفحة النجاح الأخيرة
+        window.location.href = "3payment.html";
+    }
+});
+</script>
 
 </body>
 
