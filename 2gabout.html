@@ -13,6 +13,7 @@
 
 </head>
 
+
 <body>
 
     <h1>🩺 موقع حجز المواعيد الطبية</h1>
@@ -166,7 +167,7 @@
 
         <br><br>
     
-     <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إتمام الحجز</button>   
+     <button type="submit" style="background-color: #2138e7; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إتمام الحجز</button>   
      </form>
 <hr>
     
@@ -189,9 +190,12 @@ document.getElementById("paymentform").addEventListener("submit", function(event
 
     var name = document.getElementById("fullName").value.trim();
     var number = document.getElementById("phone").value.trim();
-
-    if (name === "" || number === "") {
-        alert("الرجاء إدخال اسم صاحب الطلب ورقم الهاتف أولاً!");
+    var email = document.getElementById("email").value.trim();
+    var doctor = document.getElementById("doctor").value.trim();
+    var appointmentDate = document.getElementById("appointmentDate").value.trim();
+  var appointmentTime = document.getElementById("appointmentTime").value.trim();
+    if (name === "" || number === "" || email === "" || doctor === "" || appointmentDate === "" || appointmentTime === "") {
+        alert("الرجاء إدخال جميع بيانات الحجز!");
     } else {
         // لو البيانات تمام، تظهر رسالة النجاح الكبرى
         alert( "تم الحجز بنجاح!لتأكيد موعدك في  العيادة يرجى الدفع.");
