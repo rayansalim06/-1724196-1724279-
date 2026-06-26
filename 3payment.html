@@ -41,7 +41,7 @@
 
         <label>CVV:</label>
         <br>
-        <input type="password">
+        <input type="password" id="cardCVV">
 
         <br><br>
      <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إتمام الدفع</button>
@@ -54,9 +54,11 @@ document.getElementById("paymentform").addEventListener("submit", function(event
 
     var name = document.getElementById("cardName").value.trim();
     var number = document.getElementById("cardNumber").value.trim();
+    var expiry = document.getElementById("cardExpiry").value.trim();
+    var cvv = document.getElementById("cardCVV").value.trim();
 
-    if (name === "" || number === "") {
-        alert("الرجاء إدخال اسم صاحب البطاقة ورقم البطاقة أولاً!");
+    if (name === "" || number === "" || expiry === "" || cvv === "") {
+        alert("الرجاء إدخال جميع بيانات البطاقة!");
     } else {
         // لو البيانات تمام، تظهر رسالة النجاح الكبرى
         alert("تم الدفع بنجاح! تم تأكيد موعدك في العيادة.");
